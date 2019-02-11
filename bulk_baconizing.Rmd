@@ -145,9 +145,9 @@ Here we download the sedimentary data.  The key component here is the `get_datas
 # Define using state names here.  Could also use altitudes, locations,
 #  dataset types. . .
 
-dataset_list <- get_dataset(datasettype='pollen',
-                            gpid = 'Utah',
-                            ageyoung = 0)
+dataset_list <- get_dataset(loc = c(-92, 10.25, -52.104141116, 79.75),
+                          ageyoung = 10000,
+                          datasettype = 'pollen')
 
 #  The load_downloads() function will download the datasets if either:
 #  there is not currently a downloaded object saved with the same dataset version

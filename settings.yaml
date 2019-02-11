@@ -22,7 +22,7 @@ core_top_err: 2
 modern: true
 
 # Prior thickness
-thickness: data/paleon_thick.csv
+thickness: FALSE
 
 # Settlement indicators
 settlement: data/expert_assessment.csv
@@ -31,4 +31,4 @@ settlement: data/expert_assessment.csv
 accumulation: false
 
 # How many processing cores should be used.
-parallel: 3
+parallel: 8
