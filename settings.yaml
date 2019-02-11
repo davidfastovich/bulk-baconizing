@@ -31,4 +31,4 @@ settlement: data/expert_assessment.csv
 accumulation: false
 
 # How many processing cores should be used.
-parallel: 8
+parallel: 4
