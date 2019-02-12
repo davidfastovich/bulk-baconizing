@@ -145,16 +145,19 @@ Here we download the sedimentary data.  The key component here is the `get_datas
 # Define using state names here.  Could also use altitudes, locations,
 #  dataset types. . .
 
-# dataset_list <- get_dataset(loc = c(-92, 10.25, -52.104141116, 79.75),
-#                           ageyoung = 10000,
-#                           datasettype = 'pollen')
-dataset_list <- readRDS("./data/dataset_v1.rds")
+dataset_list <- get_dataset(loc = c(-92, 10.25, -52.104141116, 60),
+                          ageyoung = 10000,
+                          datasettype = 'pollen')
+# load("./data/dataset_v1.RData")
+# dataset_list <- dataset.list
 
 #  The load_downloads() function will download the datasets if either:
 #  there is not currently a downloaded object saved with the same dataset version
 #  or the setup parameter is TRUE, which calls for the whole data file to be re-written.
 
-downloads <- readRDS(paste0("./data/pollen_v", settings$version, ".rds"))
+downloads <- suppressWarnings(load_downloads(dataset_list,
+                            version = settings$version,
+                            setup = settings$clean_run))
 
 ```
 
