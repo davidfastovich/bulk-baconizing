@@ -245,6 +245,7 @@ if ((!existing_params) | settings$reset_parameters == TRUE) {
                        acc.shape.old = 0.9,
                        mem.strength = 2.,
                        mem.mean = 0.5,
+                       d.by = 1,
                        hiatus = as.numeric(NA),
                        thick = 5.,
                        age.type = as.character(NA),
@@ -348,6 +349,11 @@ for (i in 1:nrow(params)) {
 
 }
 
+                  build_agefiles(param = params[312, ],
+                                ageorder = ageorder,
+                                datasets = dataset_list[[312]],
+                                downloads = downloads[[312]],
+                                settings = settings)
 ```
 
 ## Possible warnings raised

@@ -1,5 +1,5 @@
 #  Should the program remove any existing files in the Cores directory and start again?
-clean_run: true
+clean_run: FALSE
 bacon: true
 bchron: true
 
