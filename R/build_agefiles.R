@@ -73,13 +73,14 @@ build_agefiles <- function(param, datasets,
       } else {
         # Date is the same, differentiate by chronology ID:
         chronid <- sapply(chrons$chronologies, function(x) x$chronologyid)
+        max_chron <- sort(chronid, decreasing = TRUE) # this has the unintented consequence of messing up core top location. Starts with WILCOX98
 
         modeldefault$default <- new_default &
           max_chron == max(chronid)
 
         param$notes <- add_msg(param$notes,
           paste0("There are multiple default models defined for the ",
-            "best age type: Default assigned to most model with ",
+            "best age type: Default assigned to model with ",
             "highest chronologyid"))
       }
     } else {

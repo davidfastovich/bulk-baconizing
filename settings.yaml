@@ -19,7 +19,7 @@ date: 'today'
 core_top_err: 2
 
 # Use modern hiatus break:
-modern: true
+modern: FALSE
 
 # Prior thickness
 thickness: FALSE
