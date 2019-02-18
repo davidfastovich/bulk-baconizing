@@ -68,7 +68,7 @@ call_bacon <- function(site_params, settings) {
         mem.mean = site_params$mem.mean,
         thick = site_params$thick, ask = FALSE,
         suggest = FALSE, depths.file = TRUE,
-        hiatus.max = 10, hiatus.depths = hiatus.depth))
+        hiatus.max = 10, hiatus.depths = hiatus.depth, d.by = site_params$d.by))
 
       if (!(class(out) == "try-error")) {
         site_params$run <- 1

@@ -148,6 +148,7 @@ Here we download the sedimentary data.  The key component here is the `get_datas
 dataset_list <- get_dataset(loc = c(-92, 10.25, -52.104141116, 60),
                           ageyoung = 10000,
                           datasettype = 'pollen')
+dataset_list <- dataset_list[-c(329:344)]
 # load("./data/dataset_v1.RData")
 # dataset_list <- dataset.list
 
@@ -158,6 +159,7 @@ dataset_list <- get_dataset(loc = c(-92, 10.25, -52.104141116, 60),
 downloads <- suppressWarnings(load_downloads(dataset_list,
                             version = settings$version,
                             setup = settings$clean_run))
+downloads <- downloads[-c(329:344)]
 
 ```
 
@@ -186,7 +188,7 @@ downloads <- load_downloads(dataset_list,
 Using the `neotoma` R package's `plot_leaflet()` function we can generate an interactive map of the dowloaded sites that can be used to explore the data further.
 
 ```{r}
-plot_leaflet(dataset_list)
+#plot_leaflet(dataset_list)
 ```
 
 Click on any point to obtain more information about the site.  Note that this rendering is only interactive when the document is knit to an HTML file.
